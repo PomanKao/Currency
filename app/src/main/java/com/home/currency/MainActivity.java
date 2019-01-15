@@ -31,17 +31,17 @@ public class MainActivity extends AppCompatActivity {
             String strNTD = edNTD.getText().toString();
             if (strNTD.equals("")) {
                 new AlertDialog.Builder(MainActivity.this)
-                        .setTitle("Problem")
-                        .setMessage("Please enter you NTD amount")
-                        .setPositiveButton("OK",null)
+                        .setTitle(R.string.problem)
+                        .setMessage(R.string.please_enter_ntd)
+                        .setPositiveButton(R.string.ok,null)
                         .show();
             } else {
                 int intNTD = Integer.parseInt(strNTD);
                 float toUSD = intNTD / 30.9f;
                 new AlertDialog.Builder(MainActivity.this)
-                        .setTitle("Result")
-                        .setMessage("USD is " + toUSD)
-                        .setPositiveButton("OK",null)
+                        .setTitle(R.string.result)
+                        .setMessage(getString(R.string.usd_is) + toUSD)
+                        .setPositiveButton(R.string.ok,null)
                         .show();
             }
         }
